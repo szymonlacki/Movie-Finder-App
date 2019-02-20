@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Jsonp, URLSearchParams } from '@angular/http';
 import 'rxjs/Rx';
-import { BehaviorSubject, Subject, Observable } from 'rx';
+import { BehaviorSubject, Subject, Observable } from 'rxjs';
 
 
 @Injectable()
