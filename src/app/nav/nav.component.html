@@ -1,0 +1,29 @@
+<!--
+<mat-form-field>
+    <mat-select placeholder="Kategorie">
+        <mat-option *ngFor="let genre of genres">
+            <p routerLink="/genres/{{genre.id}}/{{genre.name}}" routerLinkActive="active">{{genre.name}}</p>
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+<form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Szukaj wszędzie" [(ngModel)]="searchStr" name="searchStr" (keyup.enter)="searchMovies()">
+    </div>
+    <button type="submit" class="btn btn-default" (click)="searchMovies()">Go</button>
+</form>
+</mat-card>
+-->
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span routerLink="/movies">Przeglądarka filmów</span>
+
+        <span class="example-spacer"></span>
+
+        <button mat-button routerLink="/movies">Strona Główna</button>
+        <button mat-button routerLink="/filter">Wyszukaj po słowach kluczowych</button>
+        <button mat-button routerLink="/search">Odkrywaj</button>
+      <!--   <button mat-button routerLink="/login">Logowanie</button> -->
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,18 @@
+
+<mat-card>
+        <mat-card-content>
+          <mat-tab-group class="demo-tab-group" >
+            <mat-tab label="Najlepiej oceniane">
+              <div class="demo-tab-content" *ngFor="let movie of topRatedList; let i = index;">
+                <movie-card [movie]="movie"></movie-card>
+              </div>
+            </mat-tab>
+            <mat-tab label="Popularne">
+              <div class="demo-tab-content" *ngFor="let movie of popularList; let i = index;">
+                <movie-card [movie]="movie"></movie-card>
+              </div>  
+            </mat-tab>
+           
+          </mat-tab-group>
+        </mat-card-content>
+      </mat-card>

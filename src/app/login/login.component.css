@@ -1,0 +1,16 @@
+
+body{
+    background-image: url("https://assets.nflxext.com/ffe/siteui/acquisition/login/login-the-crown_2-1500x1000.jpg");
+    background-repeat: no-repeat;
+}
+
+.vertical-offset-100{
+    padding-top:100px;
+    font-family: 'Merriweather', serif;
+}
+
+a{
+    font-weight: bold;
+}
+
+

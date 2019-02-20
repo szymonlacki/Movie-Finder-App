@@ -1,0 +1,43 @@
+
+ body {
+    background-image: url("../login_image.jpg");
+ }
+
+.btn-danger{
+    margin-top:420px;
+    margin-left: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.wrapper{
+    background-color: black;
+    opacity: 0.6;
+    height: 100%;
+    position: relative;
+}
+
+.text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    margin-top:300px;
+    margin-left: 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    font-weight: bold;
+}
+
+.btn-primary{
+position: absolute;
+right: 0;
+top: 0;
+margin-right: 20px;
+margin-top: 20px;
+font-family: 'Merriweather', serif;
+}

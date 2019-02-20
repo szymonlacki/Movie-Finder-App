@@ -1,0 +1,27 @@
+<!--
+
+<img class="card-img-top " src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path" alt="Responsive image">
+<img class="card-img-top" src="assets/img/abstract-image.jpg" *ngIf="!movie.poster_path" alt="Responsive image">
+-->
+<div class="card" *ngIf="movie.poster_path!=null" routerLink="/movie/{{movie.id}}">
+    <img class="card-img-top img-fluid " src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" *ngIf="movie.poster_path"
+        alt="https://loremflickr.com/320/240">
+    <img class="card-img-top img-fluid " src="assets/img/abstract-image.jpg" *ngIf="!movie.poster_path" alt="https://loremflickr.com/320/240">
+
+    <div class="card-img-overlay">
+        <h5>{{movie.release_date}}</h5>
+        <h5 routerLink="/movie/{{movie.id}}">{{movie.title}}</h5>
+    </div>
+</div>
+<!--
+    <a routerLink="/movie/{{movie.id}}">{{movie.title}}</a>
+
+    <p><strong>Release Date: </strong>{{movie.release_date}}</p>
+    <p>
+        <a routerLink="/movie/{{movie.id}}">View details &raquo;</a>
+        <small class="label label-success pull-right" *ngIf="movie.vote_average">
+            {{movie.vote_average}}
+            <i class="glyphicon glyphicon-star"></i>
+          </small>
+    </p>
+-->

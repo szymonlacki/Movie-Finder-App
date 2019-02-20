@@ -1,0 +1,59 @@
+<mat-card> 
+<mat-form-field>
+  <mat-select placeholder="Filtruj według" [(ngModel)]="option" >
+      <mat-option value="movie">Filmy</mat-option>
+      <mat-option value="person">Aktorzy</mat-option>
+      <mat-option value="tv">Tv Shows</mat-option>
+      <mat-option value="company">Producenci</mat-option>
+      
+    
+  </mat-select>
+
+
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput placeholder="Filtruj według słów kluczowych" [(ngModel)]="searchStr" name="searchStr" (keyup.enter)="searchMovies()">
+
+</mat-form-field>
+ <button mat-raised-button color="primary" (click)="searchMovies()">Szukaj</button> 
+
+<div class="row is-flex" id="results">
+  <div *ngFor="let movie of searchRes; let i = index;">
+      <movie-card [movie]="movie"></movie-card>
+  </div>
+  <div *ngFor="let company of searchRes; let i = index;">
+
+        <div class="card" *ngIf="company.logo_path!=null" >
+          <img class="card-img-top img-fluid " src="https://image.tmdb.org/t/p/w300/{{company.logo_path}}" *ngIf="company.logo_path"
+              alt="https://loremflickr.com/320/240">
+          <img class="card-img-top img-fluid " src="assets/img/abstract-image.jpg" *ngIf="!company.logo_path" alt="https://loremflickr.com/320/240">
+      
+          <div class="card-img-overlay" >
+            
+              <h5 >{{company.name}}</h5>
+          </div>
+      </div>
+    </div>
+
+  
+
+
+  
+  <div *ngFor="let actor of searchRes; let i = index;">
+
+    <div class="card" *ngIf="actor.profile_path!=null" routerLink="/actor/{{actor.id}}">
+      <img class="card-img-top img-fluid " src="https://image.tmdb.org/t/p/w300/{{actor.profile_path}}" *ngIf="actor.profile_path"
+          alt="https://loremflickr.com/320/240">
+      <img class="card-img-top img-fluid " src="assets/img/abstract-image.jpg" *ngIf="!actor.profile_path" alt="https://loremflickr.com/320/240">
+  
+      <div class="card-img-overlay" >
+        
+          <h5 >{{actor.name}}</h5>
+      </div>
+  </div>
+</div>
+
+  
+</div>
+</mat-card>

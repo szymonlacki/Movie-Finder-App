@@ -1,0 +1,40 @@
+.card-img-overlay {
+    background: black;
+    top: 60%;
+    color: white;
+    transition: .2s top ease-out;
+    opacity: 0.9;
+}
+
+.card-img-overlay h5 {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 170px;
+    height: 270px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.card:hover .card-img-overlay {
+    top: 100%;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 170px;
+    height: 270px;
+}
+
+.mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary{
+    margin-left:10px;
+}
